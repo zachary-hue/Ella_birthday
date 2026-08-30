@@ -1,6 +1,17 @@
-# React + Vite
+# Ella's Birthday
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A little birthday site for Ella, built with React + Vite.
+
+## Running locally
+
+```
+npm install
+npm run dev
+```
+
+## Template notes
+
+This project started from the Vite React template, which provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
 Currently, two official plugins are available:
 
