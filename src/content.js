@@ -59,7 +59,7 @@ export const moments = [
   },
 ]
 
-export const notesAside = 'things that are true about you, in no order:'
+export const notesAside = 'things that i like about you ...'
 
 export const notes = [
   {
