@@ -1,24 +1,19 @@
-import { motion, useScroll, useSpring } from 'motion/react'
 import Hero from './components/Hero'
 import WishButton from './components/WishButton'
-import Timeline from './components/Timeline'
+import Moments from './components/Moments'
 import Gallery from './components/Gallery'
-import Traits from './components/Traits'
+import Notes from './components/Notes'
 import Letter from './components/Letter'
 
 export default function App() {
-  const { scrollYProgress } = useScroll()
-  const progress = useSpring(scrollYProgress, { stiffness: 140, damping: 30, restDelta: 0.001 })
-
   return (
     <>
-      <motion.div className="scroll-progress" style={{ scaleX: progress }} aria-hidden="true" />
       <Hero />
       <main>
         <WishButton />
-        <Timeline />
+        <Moments />
         <Gallery />
-        <Traits />
+        <Notes />
         <Letter />
       </main>
     </>

@@ -5,17 +5,18 @@
   display: grid;
   place-items: center;
   padding: clamp(1rem, 5vw, 3rem);
-  background: rgba(9, 2, 16, 0.82);
-  backdrop-filter: blur(14px);
+  background: rgba(43, 33, 25, 0.86);
+  backdrop-filter: blur(10px);
 }
 
 .lightbox-figure {
   margin: 0;
-  max-width: min(90vw, 760px);
+  max-width: min(90vw, 720px);
   max-height: 82vh;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 50px 120px -40px rgba(0, 0, 0, 1);
+  padding: 12px;
+  background: #fffdf8;
+  border-radius: 2px;
+  box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.9);
   cursor: grab;
 }
 
@@ -24,26 +25,26 @@
 }
 
 .lightbox-figure .photo {
-  max-height: 82vh;
+  max-height: 78vh;
 }
 
 .lightbox-figure .photo img {
-  max-height: 82vh;
+  max-height: 78vh;
   object-fit: contain;
 }
 
 .lightbox-chrome {
   position: absolute;
   left: 50%;
-  bottom: clamp(1rem, 4vh, 2.4rem);
+  bottom: clamp(1rem, 4vh, 2.2rem);
   translate: -50% 0;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0.5rem 0.7rem;
+  gap: 0.9rem;
+  padding: 0.4rem 0.6rem;
   border-radius: 999px;
-  background: rgba(255, 244, 236, 0.1);
-  border: 1px solid rgba(255, 244, 236, 0.16);
+  background: rgba(253, 246, 234, 0.14);
+  border: 1px solid rgba(253, 246, 234, 0.24);
 }
 
 .lb-arrow {
@@ -51,8 +52,8 @@
   height: 40px;
   border-radius: 50%;
   font-size: 1.1rem;
-  color: var(--cream);
-  background: rgba(255, 244, 236, 0.12);
+  color: var(--paper);
+  background: rgba(253, 246, 234, 0.14);
   transition: background 200ms ease, transform 200ms ease;
 }
 
@@ -64,9 +65,9 @@
 .lb-count {
   min-width: 4.5ch;
   text-align: center;
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  color: var(--cream-dim);
+  font-family: var(--hand);
+  font-size: 1.3rem;
+  color: var(--paper);
 }
 
 .lb-close {
@@ -77,8 +78,8 @@
   height: 44px;
   border-radius: 50%;
   font-size: 1.1rem;
-  color: var(--cream);
-  background: rgba(255, 244, 236, 0.12);
+  color: var(--paper);
+  background: rgba(253, 246, 234, 0.14);
   transition: background 200ms ease, transform 200ms ease;
 }
 

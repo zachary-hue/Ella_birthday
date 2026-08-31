@@ -1,25 +1,21 @@
 .wish {
-  text-align: center;
   display: grid;
   justify-items: center;
+  text-align: center;
 }
 
 .wish-inner {
+  position: relative;
   display: grid;
   justify-items: center;
 }
 
-.wish .section-body {
-  text-align: center;
-}
-
-/* Cake ------------------------------------------------------------------ */
+/* Cake ------------------------------------------------------------------- */
 
 .cake {
   position: relative;
   width: 210px;
-  height: 190px;
-  margin: 3rem 0 2.4rem;
+  height: 180px;
   display: grid;
   align-content: end;
   justify-items: center;
@@ -35,13 +31,10 @@
 .candle {
   position: relative;
   width: 9px;
-  height: 42px;
+  height: 40px;
   border-radius: 3px;
-  background: repeating-linear-gradient(
-    45deg,
-    var(--cream) 0 5px,
-    var(--pink) 5px 10px
-  );
+  background: repeating-linear-gradient(45deg, #fffdf8 0 5px, var(--pink) 5px 10px);
+  box-shadow: 0 1px 2px rgba(60, 40, 20, 0.2);
 }
 
 .flame {
@@ -52,8 +45,8 @@
   height: 20px;
   translate: -50% -3px;
   border-radius: 50% 50% 50% 50% / 62% 62% 38% 38%;
-  background: radial-gradient(ellipse at 50% 75%, var(--cream) 5%, var(--lemon) 42%, var(--tangerine) 78%);
-  box-shadow: 0 0 24px 6px rgba(255, 217, 61, 0.55);
+  background: radial-gradient(ellipse at 50% 75%, #fffdf0 5%, var(--lemon) 42%, var(--tangerine) 80%);
+  box-shadow: 0 0 22px 5px rgba(242, 183, 5, 0.5);
   transform-origin: 50% 100%;
   animation: flicker 0.45s ease-in-out infinite alternate;
 }
@@ -70,7 +63,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--cream-dim);
+  background: var(--ink-faint);
   opacity: 0;
 }
 
@@ -79,78 +72,101 @@
 }
 
 @keyframes smoke {
-  0% { opacity: 0.55; transform: translate(-50%, -4px) scale(0.6); }
-  100% { opacity: 0; transform: translate(-50%, -70px) scale(2.6); }
+  0% { opacity: 0.5; transform: translate(-50%, -4px) scale(0.6); }
+  100% { opacity: 0; transform: translate(-50%, -66px) scale(2.6); }
 }
 
 .cake-frosting {
   width: 150px;
   height: 26px;
   border-radius: 14px 14px 6px 6px;
-  background: linear-gradient(var(--cream), #ffd9ea);
-  box-shadow: 0 4px 0 rgba(255, 45, 149, 0.35);
+  background: linear-gradient(#fffdf8, #ffd9e6);
 }
 
 .cake-tier {
-  border-radius: 8px;
+  border-radius: 7px;
 }
 
 .cake-tier-top {
   width: 150px;
-  height: 40px;
-  background: linear-gradient(var(--pink), #d81b76);
+  height: 38px;
+  background: linear-gradient(var(--pink), #d81b6a);
 }
 
 .cake-tier-bottom {
-  width: 200px;
-  height: 52px;
+  width: 198px;
+  height: 50px;
   background: linear-gradient(var(--lilac), #6d28d9);
-  box-shadow: var(--spring-shadow);
+  box-shadow: 0 16px 30px -18px rgba(60, 40, 20, 0.7);
 }
 
 .cake-plate {
-  width: 230px;
-  height: 10px;
+  width: 228px;
+  height: 9px;
   margin-top: 4px;
   border-radius: 999px;
-  background: linear-gradient(var(--cream-dim), #8b7a94);
+  background: var(--paper-edge);
 }
 
-/* Button ---------------------------------------------------------------- */
+/* Aside + button ---------------------------------------------------------- */
+
+.wish-aside {
+  position: relative;
+  margin: 1.6rem 0 0.5rem;
+}
+
+.wish-aside p {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--ink-soft);
+  rotate: -1.5deg;
+}
+
+.wish-arrow {
+  position: absolute;
+  right: -54px;
+  top: 4px;
+  width: 40px;
+  rotate: 128deg;
+}
 
 .wish-button {
-  padding: 1rem 2.6rem;
+  margin-top: 0.6rem;
+  padding: 0.55rem 2.2rem;
   border-radius: 999px;
-  font-family: var(--font-display);
-  font-size: clamp(1.1rem, 3vw, 1.5rem);
-  font-weight: 600;
-  color: var(--plum-900);
-  background: linear-gradient(120deg, var(--lemon), var(--tangerine) 55%, var(--pink));
-  box-shadow: var(--spring-shadow);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #fffdf8;
+  background: var(--pink);
+  box-shadow: 0 10px 22px -10px rgba(255, 45, 120, 0.85);
+  rotate: -1deg;
   will-change: transform;
 }
 
 .wish-status {
-  min-height: 3rem;
-  margin-top: 1.2rem;
+  min-height: 3.4rem;
+  margin-top: 0.9rem;
 }
 
 .wish-status p {
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
+  display: grid;
+  gap: 0.1rem;
 }
 
 .wish-status strong {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: var(--mint);
 }
 
 .wish-status span {
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--cream-dim);
+  font-size: 1.2rem;
+  color: var(--ink-faint);
+}
+
+@media (max-width: 520px) {
+  .wish-arrow {
+    display: none;
+  }
 }

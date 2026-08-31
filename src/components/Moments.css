@@ -1,0 +1,106 @@
+.moments {
+  position: relative;
+}
+
+.moments-thread {
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  width: 40px;
+  /* An SVG with a viewBox resolves `height: auto` to its intrinsic height and
+     ignores `bottom`, so the height has to be stated outright. */
+  height: calc(100% - 4rem);
+  translate: -50% 0;
+  overflow: visible;
+}
+
+.moments-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(4rem, 11vh, 7.5rem);
+}
+
+.moment {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 4.5rem);
+}
+
+.moment.is-right {
+  direction: rtl;
+}
+
+.moment.is-right > * {
+  direction: ltr;
+}
+
+.moment-photo {
+  width: min(340px, 100%);
+  justify-self: center;
+}
+
+.moment-note {
+  position: relative;
+  max-width: 34ch;
+}
+
+.moment-when {
+  display: block;
+  font-size: 1.3rem;
+  color: var(--ink-faint);
+  rotate: -1.5deg;
+}
+
+.moment-title {
+  margin: 0.1rem 0 0.6rem;
+  font-size: clamp(2rem, 4.6vw, 2.9rem);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.moment-note p {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+.moment-squiggle {
+  width: 110px;
+  margin-top: 0.9rem;
+}
+
+.moment-mark {
+  position: absolute;
+  right: -46px;
+  bottom: -18px;
+  width: 34px;
+  rotate: 12deg;
+}
+
+@media (max-width: 860px) {
+  .moments-thread {
+    left: 16px;
+    translate: none;
+  }
+
+  .moment,
+  .moment.is-right {
+    direction: ltr;
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    padding-left: 2.6rem;
+  }
+
+  .moment-photo {
+    justify-self: start;
+    width: min(300px, 100%);
+  }
+
+  .moment-mark {
+    right: 8px;
+  }
+}

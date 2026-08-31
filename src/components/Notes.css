@@ -1,0 +1,70 @@
+.notes-aside {
+  position: relative;
+  width: fit-content;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.notes-aside p {
+  margin: 0;
+  font-size: clamp(1.5rem, 3.4vw, 2.1rem);
+  color: var(--ink-soft);
+  rotate: -1deg;
+}
+
+.notes-underline {
+  position: absolute;
+  left: 4%;
+  top: calc(100% - 4px);
+  width: 92%;
+  height: 16px;
+}
+
+.notes-wall {
+  list-style: none;
+  margin: 3.4rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.sticky {
+  position: relative;
+  width: 232px;
+  padding: 1.9rem 1.2rem 1.4rem;
+  color: var(--ink);
+  box-shadow:
+    0 1px 1px rgba(60, 40, 20, 0.16),
+    0 16px 26px -16px rgba(60, 40, 20, 0.5);
+  /* A slight curl at the bottom corner, like it is peeling off. */
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 92% 100%, 0 100%);
+  will-change: transform;
+}
+
+.sticky-pin {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  translate: -50% 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 32%, #ff7d9c, #c81e45 70%);
+  box-shadow: 0 2px 3px rgba(60, 40, 20, 0.4);
+}
+
+.sticky h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.sticky p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(43, 33, 25, 0.78);
+}

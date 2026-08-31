@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { wish } from '../content'
 import { burst, popFrom } from '../confetti'
+import Doodle from './Doodle'
 import './WishButton.css'
 
 const CANDLES = [0, 1, 2]
@@ -25,24 +26,19 @@ export default function WishButton() {
   }
 
   return (
-    <section className="section wish" aria-labelledby="wish-heading">
+    <section className="scrap wish">
       <motion.div
         className="wish-inner"
-        initial={reduced ? false : { opacity: 0, y: 40 }}
+        initial={reduced ? false : { opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
-        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       >
-        <h2 className="section-heading" id="wish-heading">
-          {wish.heading}
-        </h2>
-        <p className="section-body">{wish.body}</p>
-
         <motion.div
           className="cake"
           ref={cakeRef}
           aria-hidden="true"
-          animate={reduced ? undefined : lit ? { y: [0, -6, 0] } : { y: 0, scale: [1, 0.92, 1] }}
+          animate={reduced ? undefined : lit ? { y: [0, -5, 0] } : { y: 0, scale: [1, 0.93, 1] }}
           transition={lit ? { duration: 3.2, repeat: Infinity, ease: 'easeInOut' } : { duration: 0.45 }}
         >
           <div className="cake-candles">
@@ -54,7 +50,7 @@ export default function WishButton() {
                       className="flame"
                       initial={{ scale: 0, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
-                      exit={{ scale: 0, opacity: 0, y: -18 }}
+                      exit={{ scale: 0, opacity: 0, y: -16 }}
                       transition={{ type: 'spring', stiffness: 260, damping: 16, delay: i * 0.08 }}
                       style={{ animationDelay: `${i * 0.23}s` }}
                     />
@@ -70,28 +66,34 @@ export default function WishButton() {
           <div className="cake-plate" />
         </motion.div>
 
+        <div className="wish-aside">
+          <p className="hand">{wish.aside}</p>
+          <Doodle name="arrow" className="wish-arrow" color="var(--lilac)" width={3.5} />
+        </div>
+
         <motion.button
           type="button"
-          className="wish-button"
+          className="wish-button hand"
           onClick={makeWish}
-          whileHover={reduced ? undefined : { scale: 1.06, rotate: -1.5 }}
-          whileTap={reduced ? undefined : { scale: 0.92, rotate: 1 }}
+          whileHover={reduced ? undefined : { scale: 1.05, rotate: -1.5 }}
+          whileTap={reduced ? undefined : { scale: 0.93, rotate: 1 }}
           transition={{ type: 'spring', stiffness: 400, damping: 15 }}
         >
           {wishes === 0 ? wish.button : wish.again}
         </motion.button>
 
-        <div className="wish-status" role="status" aria-live="polite">
+        <div className="wish-status hand" role="status" aria-live="polite">
           <AnimatePresence mode="wait">
             {wishes > 0 && (
               <motion.p
                 key={wishes}
-                initial={reduced ? false : { opacity: 0, y: 14, scale: 0.8 }}
+                initial={reduced ? false : { opacity: 0, y: 12, scale: 0.85 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -14, scale: 0.9 }}
+                exit={{ opacity: 0, y: -12, scale: 0.9 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 18 }}
               >
-                <strong>{wish.granted}</strong> <span>{wish.counter(wishes)}</span>
+                <strong>{wish.granted}</strong>
+                <span>{wish.counter(wishes)}</span>
               </motion.p>
             )}
           </AnimatePresence>

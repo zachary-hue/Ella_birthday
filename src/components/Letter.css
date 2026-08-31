@@ -1,77 +1,97 @@
-.letter::before {
-  content: '';
-  position: absolute;
-  inset: 25% -20% -10%;
-  z-index: -1;
-  pointer-events: none;
-  background: radial-gradient(58% 80% at 50% 100%, rgba(176, 107, 255, 0.28), transparent 72%);
-}
-
 .letter {
   display: grid;
   justify-items: center;
-  text-align: center;
 }
 
-.letter-body {
-  max-width: 60ch;
-  margin-top: 2.8rem;
-  text-align: left;
-  display: grid;
-  gap: 1.35rem;
+.letter-page {
+  position: relative;
+  width: min(64ch, 100%);
+  padding: clamp(2.4rem, 5vw, 3.6rem) clamp(1.6rem, 4vw, 3.2rem) clamp(2.6rem, 5vw, 3.4rem);
+  background: #fffdf6;
+  border-radius: 2px;
+  box-shadow:
+    0 2px 3px rgba(60, 40, 20, 0.14),
+    0 30px 60px -28px rgba(60, 40, 20, 0.6);
+  /* Ruled paper, plus the red margin line down the left. */
+  background-image:
+    linear-gradient(90deg, transparent 0 calc(clamp(1.6rem, 4vw, 3.2rem) - 12px), rgba(255, 45, 120, 0.22) 0 calc(clamp(1.6rem, 4vw, 3.2rem) - 10px), transparent 0),
+    repeating-linear-gradient(transparent 0 31px, rgba(109, 92, 73, 0.13) 31px 32px);
+  background-position: 0 0, 0 clamp(2.4rem, 5vw, 3.6rem);
 }
 
-.letter-body p {
-  margin: 0;
-  font-size: clamp(1.02rem, 2.2vw, 1.16rem);
-  line-height: 1.75;
-  color: var(--cream-dim);
+.letter-tape {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 130px;
+  height: 30px;
+  translate: -50% 0;
+  rotate: -1.5deg;
+  background: var(--tape);
+  clip-path: polygon(3% 0, 97% 6%, 100% 96%, 1% 100%);
 }
 
-.letter-body p.letter-greeting {
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  line-height: 1.2;
-  color: var(--lemon);
+.letter-page p {
+  margin: 0 0 32px;
 }
 
-/* The last line of the letter lands a little heavier than the rest. */
-.letter-body p:last-of-type {
-  color: var(--cream);
+.letter-greeting {
+  font-size: clamp(1.8rem, 4.4vw, 2.4rem);
+  line-height: 64px;
+  color: var(--pink);
+  rotate: -1deg;
+}
+
+.letter-para {
+  font-size: 1.02rem;
+  line-height: 32px;
+  color: var(--ink-soft);
+}
+
+.letter-para:last-of-type {
+  color: var(--ink);
 }
 
 .letter-signoff {
-  margin: 3.4rem 0 0;
-  font-family: var(--font-display);
-  font-size: clamp(1.9rem, 6vw, 3.4rem);
+  position: relative;
+  width: fit-content;
+  margin-top: 32px;
+  font-size: clamp(2rem, 5.4vw, 3rem);
+  line-height: 64px;
   font-weight: 700;
-  background: linear-gradient(100deg, var(--mint), var(--lemon) 50%, var(--pink));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--ink);
+}
+
+.letter-underline {
+  position: absolute;
+  left: 0;
+  top: calc(100% - 16px);
+  width: 100%;
+  height: 16px;
 }
 
 .letter-signature {
-  margin: 0.4rem 0 2.4rem;
-  font-size: 1.05rem;
-  color: var(--cream-dim);
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  line-height: 32px;
+  color: var(--ink-soft);
 }
 
 .letter-encore {
-  padding: 0.85rem 2rem;
+  margin-top: 3rem;
+  padding: 0.5rem 1.8rem;
   border-radius: 999px;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  color: var(--cream);
-  background: rgba(255, 244, 236, 0.09);
-  border: 1px solid rgba(255, 244, 236, 0.2);
+  font-size: 1.45rem;
+  color: var(--ink);
+  background: transparent;
+  border: 2.5px solid var(--ink-faint);
+  rotate: -1deg;
   will-change: transform;
 }
 
 .letter-footer {
-  margin-top: 4.5rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(217, 200, 221, 0.45);
+  margin-top: 4rem;
+  font-size: 1.2rem;
+  color: var(--ink-faint);
+  rotate: -0.6deg;
 }

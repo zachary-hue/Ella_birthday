@@ -1,0 +1,82 @@
+.taped {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 12px 12px 10px;
+  background: #fffdf8;
+  border-radius: 2px;
+  box-shadow:
+    0 1px 2px rgba(60, 40, 20, 0.18),
+    0 14px 26px -14px rgba(60, 40, 20, 0.45);
+  will-change: transform;
+}
+
+.taped.is-clickable {
+  cursor: pointer;
+  text-align: inherit;
+}
+
+.taped-window {
+  overflow: hidden;
+  background: var(--paper-shade);
+}
+
+.taped-caption {
+  display: block;
+  padding: 0.45rem 0.1rem 0;
+  font-size: 1.35rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+/* Tape ------------------------------------------------------------------- */
+
+.tape-strip {
+  position: absolute;
+  width: 78px;
+  height: 26px;
+  background: var(--tape);
+  box-shadow: 0 1px 2px rgba(60, 40, 20, 0.12);
+  /* Torn-looking ends. */
+  clip-path: polygon(3% 0, 97% 6%, 100% 96%, 1% 100%);
+  z-index: 2;
+}
+
+.tape-corners .tape-a {
+  top: -13px;
+  left: -20px;
+  rotate: -32deg;
+}
+
+.tape-corners .tape-b {
+  bottom: -13px;
+  right: -20px;
+  rotate: -32deg;
+  background: var(--tape-alt);
+}
+
+.tape-top .tape-a {
+  top: -14px;
+  left: 50%;
+  translate: -50% 0;
+  rotate: -2deg;
+  width: 96px;
+}
+
+.tape-top .tape-b {
+  display: none;
+}
+
+.tape-single .tape-a {
+  top: -12px;
+  left: 14%;
+  rotate: -8deg;
+}
+
+.tape-single .tape-b {
+  display: none;
+}
+
+.tape-none .tape-strip {
+  display: none;
+}

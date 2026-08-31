@@ -1,27 +1,30 @@
 :root {
-  /* Ground */
-  --plum-900: #0e0318;
-  --plum-800: #150522;
-  --plum-700: #1e0930;
-  --plum-600: #2b0f45;
+  /* Paper */
+  --paper: #fdf6ea;
+  --paper-shade: #f4e8d4;
+  --paper-edge: #e6d6bc;
 
-  /* Candy */
-  --pink: #ff2d95;
-  --tangerine: #ff8a3d;
-  --lilac: #b06bff;
-  --mint: #2fe3c2;
-  --lemon: #ffd93d;
+  /* Ink */
+  --ink: #2b2119;
+  --ink-soft: #6d5c49;
+  --ink-faint: #a4907a;
 
-  --cream: #fff4ec;
-  --cream-dim: #d9c8dd;
+  /* Markers, tape, stickers */
+  --pink: #ff2d78;
+  --tangerine: #ff7a2f;
+  --lilac: #8b5cf6;
+  --mint: #12a594;
+  --lemon: #f2b705;
 
-  --font-display: 'Fredoka', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --tape: rgba(247, 214, 122, 0.62);
+  --tape-alt: rgba(255, 168, 190, 0.55);
 
-  --page: min(1120px, 92vw);
-  --spring-shadow: 0 24px 60px -20px rgba(255, 45, 149, 0.45);
+  --hand: 'Caveat', 'Segoe Script', cursive;
+  --body: 'Nunito', system-ui, -apple-system, sans-serif;
 
-  color-scheme: dark;
+  --page: min(1080px, 92vw);
+
+  color-scheme: light;
 }
 
 *,
@@ -32,30 +35,27 @@
 
 html {
   scroll-behavior: smooth;
-  /* Sections animate in from off-screen; clip so that never becomes a
-     horizontal scrollbar. `clip` rather than `hidden` so no scroll
-     container is created on the root. */
+  /* Things animate in from off the page; clip so that never becomes a
+     horizontal scrollbar. */
   overflow-x: clip;
 }
 
 body {
   margin: 0;
-  background: var(--plum-800);
-  color: var(--cream);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.65;
   overflow-x: clip;
-}
-
-h1,
-h2,
-h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.05;
-  margin: 0;
+  background-color: var(--paper);
+  /* Faint grain and a warm bloom, so it reads as paper rather than a page. */
+  background-image:
+    radial-gradient(circle at 18% 12%, rgba(255, 170, 120, 0.16), transparent 42%),
+    radial-gradient(circle at 84% 30%, rgba(180, 150, 255, 0.14), transparent 46%),
+    radial-gradient(circle at 50% 88%, rgba(120, 220, 200, 0.12), transparent 44%),
+    radial-gradient(rgba(120, 96, 70, 0.055) 1px, transparent 1px);
+  background-size: auto, auto, auto, 22px 22px;
+  background-attachment: fixed, fixed, fixed, scroll;
 }
 
 img {
@@ -72,33 +72,24 @@ button {
 }
 
 :focus-visible {
-  outline: 3px solid var(--lemon);
+  outline: 3px solid var(--lilac);
   outline-offset: 4px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
-/* Shared section furniture ------------------------------------------------ */
+/* Handwriting ------------------------------------------------------------- */
 
-.section {
+.hand {
+  font-family: var(--hand);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.scrap {
   position: relative;
   width: var(--page);
   margin-inline: auto;
-  padding-block: clamp(5rem, 12vh, 9rem);
-}
-
-.section-heading {
-  font-size: clamp(2.2rem, 6vw, 3.8rem);
-  background: linear-gradient(100deg, var(--lemon), var(--pink) 55%, var(--lilac));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.section-body {
-  max-width: 46ch;
-  margin: 1rem 0 0;
-  color: var(--cream-dim);
-  font-size: clamp(1rem, 2vw, 1.15rem);
+  padding-block: clamp(3.5rem, 9vh, 6rem);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -113,18 +104,4 @@ button {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
-}
-
-/* Scroll progress bar ----------------------------------------------------- */
-
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  z-index: 40;
-  transform-origin: left center;
-  background: linear-gradient(90deg, var(--lemon), var(--pink) 45%, var(--lilac));
-  box-shadow: 0 0 18px rgba(255, 45, 149, 0.7);
 }
