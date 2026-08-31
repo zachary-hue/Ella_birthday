@@ -1,0 +1,88 @@
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 5vw, 3rem);
+  background: rgba(9, 2, 16, 0.82);
+  backdrop-filter: blur(14px);
+}
+
+.lightbox-figure {
+  margin: 0;
+  max-width: min(90vw, 760px);
+  max-height: 82vh;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 50px 120px -40px rgba(0, 0, 0, 1);
+  cursor: grab;
+}
+
+.lightbox-figure:active {
+  cursor: grabbing;
+}
+
+.lightbox-figure .photo {
+  max-height: 82vh;
+}
+
+.lightbox-figure .photo img {
+  max-height: 82vh;
+  object-fit: contain;
+}
+
+.lightbox-chrome {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(1rem, 4vh, 2.4rem);
+  translate: -50% 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 244, 236, 0.1);
+  border: 1px solid rgba(255, 244, 236, 0.16);
+}
+
+.lb-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  color: var(--cream);
+  background: rgba(255, 244, 236, 0.12);
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.lb-arrow:hover {
+  background: var(--pink);
+  transform: scale(1.1);
+}
+
+.lb-count {
+  min-width: 4.5ch;
+  text-align: center;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--cream-dim);
+}
+
+.lb-close {
+  position: absolute;
+  top: clamp(1rem, 4vh, 2rem);
+  right: clamp(1rem, 4vw, 2rem);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  color: var(--cream);
+  background: rgba(255, 244, 236, 0.12);
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.lb-close:hover {
+  background: var(--pink);
+  transform: rotate(90deg) scale(1.08);
+}

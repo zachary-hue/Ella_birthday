@@ -1,0 +1,47 @@
+.gallery-grid {
+  margin-top: 3.4rem;
+  columns: 3;
+  column-gap: 1.2rem;
+}
+
+.gallery-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 1.2rem;
+  border-radius: 18px;
+  overflow: hidden;
+  break-inside: avoid;
+  background: var(--plum-600);
+  box-shadow: 0 26px 50px -30px rgba(0, 0, 0, 0.95);
+  will-change: transform;
+}
+
+.gallery-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 244, 236, 0.14);
+  background: linear-gradient(160deg, rgba(255, 45, 149, 0.35), rgba(176, 107, 255, 0.2));
+  opacity: 0;
+  transition: opacity 320ms ease;
+}
+
+.gallery-item:hover .gallery-glow,
+.gallery-item:focus-visible .gallery-glow {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    columns: 2;
+  }
+}
+
+@media (max-width: 520px) {
+  .gallery-grid {
+    columns: 1;
+  }
+}
