@@ -32,9 +32,9 @@ export const moments = [
   {
     photo: 'p01',
     tilt: 2,
-    when: "every week",
+    when: "the study rooms",
     title: "studying, technically",
-    body: "We sat at that table for hours. I don't think either of us actually finished anything.",
+    body: "Those rooms were never that productive. We would talk, procrastinate, get a little homework done. You were always there to do it with us, which made it more fun.",
   },
   {
     photo: 'p04',
