@@ -3,7 +3,8 @@ import Hero from './components/Hero'
 import WishButton from './components/WishButton'
 import Timeline from './components/Timeline'
 import Gallery from './components/Gallery'
-import Closing from './components/Closing'
+import Traits from './components/Traits'
+import Letter from './components/Letter'
 
 export default function App() {
   const { scrollYProgress } = useScroll()
@@ -17,7 +18,8 @@ export default function App() {
         <WishButton />
         <Timeline />
         <Gallery />
-        <Closing />
+        <Traits />
+        <Letter />
       </main>
     </>
   )

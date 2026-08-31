@@ -15,8 +15,9 @@ Then open http://localhost:5173.
 ## Editing the words
 
 All of the copy lives in [`src/content.js`](src/content.js) — the hero, the
-timeline entries and their captions, the closing note. Nothing in that file is
-load-bearing for the animations, so any of it can be rewritten freely.
+timeline captions, the trait cards, and the letter, which is just an array of
+paragraphs. Nothing in that file is load-bearing for the animations, so any of
+it can be rewritten freely.
 
 ## The photos
 
@@ -45,7 +46,8 @@ in `galleryPhotos`.
 | `src/components/Timeline.jsx` | Scroll-driven spine with alternating photo cards |
 | `src/components/Gallery.jsx` | Masonry grid; click for a lightbox |
 | `src/components/Lightbox.jsx` | Full-screen viewer with keyboard and swipe navigation |
-| `src/components/Closing.jsx` | The sappy part |
+| `src/components/Traits.jsx` | Four cards, one per thing worth saying about her |
+| `src/components/Letter.jsx` | The letter itself, revealed a paragraph at a time |
 | `src/confetti.js` | The three confetti effects |
 
 Animation is [`motion`](https://motion.dev) for anything spring- or
