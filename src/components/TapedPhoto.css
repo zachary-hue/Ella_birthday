@@ -43,6 +43,15 @@
   text-align: center;
 }
 
+.taped-note {
+  display: block;
+  padding-top: 0.1rem;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  color: var(--ink-faint);
+  rotate: -1.2deg;
+}
+
 /* Tape ------------------------------------------------------------------- */
 
 .tape-strip {

@@ -33,6 +33,7 @@ export default function Gallery() {
             key={entry.photo}
             photo={byId[entry.photo]}
             caption={entry.caption}
+            note={entry.note}
             tilt={entry.tilt}
             tape={i % 4 === 0 ? 'single' : i % 3 === 0 ? 'top' : 'corners'}
             sway

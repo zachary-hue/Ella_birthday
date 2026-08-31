@@ -87,22 +87,27 @@ export const notes = [
 export const galleryAside = 'just some of the best moments with you'
 
 export const galleryPhotos = [
-  { photo: 'p02', caption: 'apple cutting in leutner', tilt: -3 },
-  { photo: 'p13', caption: "no idea what I'm doing here", tilt: 2.5 },
+  {
+    photo: 'p02',
+    caption: 'apple cutting in leutner',
+    note: 'one of my first times hanging out with you',
+    tilt: -3,
+  },
+  { photo: 'p13', caption: "the usual random late night hangout", tilt: 2.5 },
   { photo: 'p07', caption: "food truck run", tilt: -1.5 },
-  { photo: 'p10', caption: "waterpark", tilt: 2 },
-  { photo: 'p12', caption: "peace signs, obviously", tilt: -2.5 },
+  { photo: 'p10', caption: "someone had a lil accident at the waterpark 😂", tilt: 2 },
+  { photo: 'p12', caption: "you helping me move out freshman year", tilt: -2.5 },
   { photo: 'p09', caption: "wandering around again", tilt: 1.6 },
   { photo: 'p06', caption: "another \"study\" night", tilt: -2 },
-  { photo: 'p15', caption: "snack acquired", tilt: 2.8 },
-  { photo: 'p05', caption: "no context for this one", tilt: -1.8 },
+  { photo: 'p15', caption: "ella enjoying her gifts", tilt: 2.8 },
+  { photo: 'p05', caption: "aura farming on you while you're studying", tilt: -1.8 },
 ]
 
 export const letter = {
   greeting: 'hey Ella,',
   paragraphs: [
     "It's really nice to be your friend. Looking back at the two years we've had in college, we've done a lot.",
-    "What I keep noticing is how many different versions of hanging out we've gotten to do. An anime session in my Fayette room with just Titus and Adrian. You and the girls, Hannah and Valerie and Catherine. The whole group at once. You fit into all of them.",
+    "What I keep noticing is how many different versions of hanging out we've gotten to do. An anime session in my Fayette room with just Titus and Adrian. You and the girls, Hannah and Valery and Katherine. The whole group at once. You fit into all of them.",
     "Then there was California. You came out with your parents, and I got to take you for matcha and ice cream, and tour you around Stanford, which neither of us goes to and which I still think is funny. I taught you golf, one of my favorite things in the world, and you were down for it.",
     "That's the thing about you. People call you a people pleaser. I don't see it that way. I think you're genuinely open to things, and you actually enjoy doing them with your friends. It's why I was so surprised when you signed up for Quidditch nationals. At first I thought you were kidding, and then you really came to Sacramento with us.",
     "I don't know how often people tell you this, but it's just nice whenever you're around. Even last night, when Adrian and I were talking trash about half the school, you stayed grounded and kept us in check. You do that more than you probably realize.",
