@@ -87,7 +87,7 @@ export const notes = [
 export const galleryAside = 'the rest of the evidence'
 
 export const galleryPhotos = [
-  { photo: 'p02', caption: "the peach", tilt: -3 },
+  { photo: 'p02', caption: 'apple cutting in leutner', tilt: -3 },
   { photo: 'p13', caption: "no idea what I'm doing here", tilt: 2.5 },
   { photo: 'p07', caption: "food truck run", tilt: -1.5 },
   { photo: 'p10', caption: "waterpark", tilt: 2 },
