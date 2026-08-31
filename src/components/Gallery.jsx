@@ -35,6 +35,8 @@ export default function Gallery() {
             caption={entry.caption}
             tilt={entry.tilt}
             tape={i % 4 === 0 ? 'single' : i % 3 === 0 ? 'top' : 'corners'}
+            sway
+            swaySeconds={[8, 5, 9, 7][i % 4]}
             sizes="(max-width: 700px) 82vw, 320px"
             layoutId={`shot-${entry.photo}`}
             onClick={() => setOpenIndex(i)}

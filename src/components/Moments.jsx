@@ -25,6 +25,8 @@ function Moment({ moment, index }) {
         photo={byId[moment.photo]}
         tilt={moment.tilt}
         tape={index % 3 === 0 ? 'top' : 'corners'}
+        sway
+        swaySeconds={[7, 9, 5, 8, 7][index % 5]}
         ratio="4 / 5"
         sizes="(max-width: 860px) 78vw, 340px"
         className="moment-photo"

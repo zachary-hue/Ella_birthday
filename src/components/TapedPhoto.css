@@ -11,6 +11,20 @@
   will-change: transform;
 }
 
+.taped.is-swaying {
+  animation: taped-sway 6s ease-in-out infinite alternate;
+}
+
+.taped.is-swaying[data-sway='5'] { animation-duration: 5s; }
+.taped.is-swaying[data-sway='7'] { animation-duration: 7s; }
+.taped.is-swaying[data-sway='8'] { animation-duration: 8s; }
+.taped.is-swaying[data-sway='9'] { animation-duration: 9s; }
+
+@keyframes taped-sway {
+  from { rotate: -0.8deg; }
+  to { rotate: 0.8deg; }
+}
+
 .taped.is-clickable {
   cursor: pointer;
   text-align: inherit;

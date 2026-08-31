@@ -1,0 +1,27 @@
+.confetti-rain {
+  position: fixed;
+  inset: 0;
+  /* Behind everything on the page, but still above the paper background. */
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.confetti-rain i {
+  position: absolute;
+  top: -10vh;
+  display: block;
+  animation-name: confetti-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+@keyframes confetti-fall {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(var(--drift), 118vh, 0) rotate(var(--spin));
+  }
+}

@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'motion/react'
 import { letter } from '../content'
-import { shower } from '../confetti'
+import { burst, shower } from '../confetti'
 import Doodle from './Doodle'
 import './Letter.css'
 
@@ -47,6 +47,7 @@ export default function Letter() {
           whileInView={{ opacity: 1, scale: 1, rotate: -1.5 }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ type: 'spring', stiffness: 140, damping: 14 }}
+          onViewportEnter={() => burst()}
         >
           {letter.signoff}
           <Doodle name="underline" className="letter-underline" color="var(--pink)" width={4} delay={0.3} stretch />

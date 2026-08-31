@@ -1,3 +1,4 @@
+import ConfettiRain from './components/ConfettiRain'
 import Hero from './components/Hero'
 import WishButton from './components/WishButton'
 import Moments from './components/Moments'
@@ -8,6 +9,7 @@ import Letter from './components/Letter'
 export default function App() {
   return (
     <>
+      <ConfettiRain />
       <Hero />
       <main>
         <WishButton />

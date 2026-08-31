@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { animate, motion, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform } from 'motion/react'
 import { hero } from '../content'
+import { burst } from '../confetti'
 import { byId } from '../photos'
 import TapedPhoto from './TapedPhoto'
 import Doodle from './Doodle'
@@ -45,6 +46,12 @@ function Age({ to }) {
 export default function Hero() {
   const reduced = useReducedMotion()
   const ref = useRef(null)
+
+  useEffect(() => {
+    const timer = setTimeout(burst, 900)
+    return () => clearTimeout(timer)
+  }, [])
+
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
   const textY = useSpring(useTransform(scrollYProgress, [0, 1], [0, -110]), { stiffness: 90, damping: 20 })
   const photoY = useSpring(useTransform(scrollYProgress, [0, 1], [0, -220]), { stiffness: 70, damping: 20 })
@@ -115,6 +122,8 @@ export default function Hero() {
           photo={byId.p03}
           caption={hero.photoCaption}
           tape="corners"
+          sway
+          swaySeconds={7}
           priority
           sizes="(max-width: 860px) 46vw, 320px"
         />

@@ -39,9 +39,9 @@ export const moments = [
   {
     photo: 'p04',
     tilt: -1.8,
-    when: "game days",
-    title: "blue and white",
-    body: "You out there with the squad. I still don't know how you keep track of all of it.",
+    when: "cheerleading",
+    title: "we came for the stunts",
+    body: "Adrian and I showed up to that game not to watch it, but to see you do stunts. The face you made when you saw us walk in was so funny. I still remember it.",
   },
   {
     photo: 'p11',
@@ -55,7 +55,7 @@ export const moments = [
     tilt: -2.2,
     when: "sacramento",
     title: "the flight home",
-    body: "You actually came to Quidditch nationals. I thought you were kidding. Flying back to Cleveland with you ended up being the best part of the trip.",
+    body: "You actually came to Quidditch nationals. I thought you were kidding. Flying back to Cleveland with you was really nice, and we got some good talks in.",
   },
 ]
 
@@ -84,7 +84,7 @@ export const notes = [
   },
 ]
 
-export const galleryAside = 'the rest of the evidence'
+export const galleryAside = 'just some of the best moments with you'
 
 export const galleryPhotos = [
   { photo: 'p02', caption: 'apple cutting in leutner', tilt: -3 },

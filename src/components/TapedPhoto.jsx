@@ -11,6 +11,8 @@ export default function TapedPhoto({
   caption,
   tilt = 0,
   tape = 'corners',
+  sway = false,
+  swaySeconds = 6,
   ratio,
   sizes,
   priority = false,
@@ -25,9 +27,10 @@ export default function TapedPhoto({
   return (
     <Wrapper
       type={onClick ? 'button' : undefined}
-      className={`taped tape-${tape} ${onClick ? 'is-clickable' : ''} ${className}`}
+      className={`taped tape-${tape} ${sway && !reduced ? 'is-swaying' : ''} ${onClick ? 'is-clickable' : ''} ${className}`}
       onClick={onClick}
       layoutId={layoutId}
+      data-sway={sway ? swaySeconds : undefined}
       style={{ rotate: reduced ? 0 : tilt }}
       whileHover={reduced || !onClick ? undefined : { rotate: 0, scale: 1.03, y: -6 }}
       whileTap={onClick && !reduced ? { scale: 0.98 } : undefined}
