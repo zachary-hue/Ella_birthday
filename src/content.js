@@ -26,8 +26,8 @@ export const moments = [
     photo: 'p14',
     tilt: -2.5,
     when: "most nights",
-    title: "somebody's floor, again",
-    body: "Anime in a dorm room with just Titus and Adrian, or the whole group piled in at once. No plan, and it never needed one.",
+    title: "my floor, again",
+    body: "Anime in my Fayette room with just Titus and Adrian, or the whole group piled in at once. No plan, and it never needed one.",
   },
   {
     photo: 'p01',
@@ -102,7 +102,7 @@ export const letter = {
   greeting: 'hey Ella,',
   paragraphs: [
     "It's really nice to be your friend. Looking back at the two years we've had in college, we've done a lot.",
-    "What I keep noticing is how many different versions of hanging out we've gotten to do. An anime session in a dorm room with just Titus and Adrian. You and the girls, Hannah and Valerie and Catherine. The whole group at once. You fit into all of them.",
+    "What I keep noticing is how many different versions of hanging out we've gotten to do. An anime session in my Fayette room with just Titus and Adrian. You and the girls, Hannah and Valerie and Catherine. The whole group at once. You fit into all of them.",
     "Then there was California. You came out with your parents, and I got to take you for matcha and ice cream, and tour you around Stanford, which neither of us goes to and which I still think is funny. I taught you golf, one of my favorite things in the world, and you were down for it.",
     "That's the thing about you. People call you a people pleaser. I don't see it that way. I think you're genuinely open to things, and you actually enjoy doing them with your friends. It's why I was so surprised when you signed up for Quidditch nationals. At first I thought you were kidding, and then you really came to Sacramento with us.",
     "I don't know how often people tell you this, but it's just nice whenever you're around. Even last night, when Adrian and I were talking trash about half the school, you stayed grounded and kept us in check. You do that more than you probably realize.",
